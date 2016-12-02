@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Segoe UI,Lucida Grande,Verdana,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #4c4c4c;
+	background-color: #fff;
+}
+.gantchart {
+	width: 100%;
+	height: auto;
+	display: block;
+	overflow-x: scroll;
+    overflow-y: hidden;
+}
+.gantchart_timebars {
+	width: calc(100% - 285px);
+	float: left;
+
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+}
+.gantchart_labels{
+	margin-top: 100px;
+	display: block;
+	width: 285px;
+
+	float: left;
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid #A5CAF2;
+	border-right: 1px solid #A5CAF2;
+}
+.timeline {
+	height: 100px;
+	background-color: white;
+	overflow: auto;
+}
+.timeline_date {
+	display: block;
+	float: left;
+	position: relative;
+	width: 60px;
+	height: 100px;
+}
+.timeline_date span {
+	writing-mode: vertical-lr;
+	transform: rotate(220deg);
+	color: #8c8c8c;
+	box-sizing: border-box;
+	cursor: default;
+	user-select: none;
+	position: absolute;
+	bottom: 8px;
+	left: 35px;
+}
+.bars {
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	background: linear-gradient(to right, 
+		white 0%, 
+		white 98%, 
+		#A5CAF2 100%);
+	background-repeat: repeat;
+	background-size: 60px;
+	border-top: 1px solid #A5CAF2;
+}
+.story_label {
+	width: 100%;
+	line-height: 16px;
+	padding: 5px 10px;
+	overflow-x: scroll;
+	box-sizing: border-box;
+}
+.story_label > span{
+	display: block;
+	overflow: auto;
+}
+.story_label_id {
+	font-weight: bold;
+	color: #2c2c2c;
+}
+.story_label_title {
+	
+}
+.story_bar_area {
+	width: 100%;
+	height: 26px;
+	position: relative;
+	background-color: transparent;
+}
+.story_bar_area:hover {
+	background-color: rgba(195,220,245,0.5);
+}
+.story_bar {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 30px;
+	width: 60px;
+	height: 100%;
+	cursor: move;
+	background-color: #017ACC;
+}
+.story_bar .ui-resizable-handle.ui-icon {
+	cursor: e-resize;
+	right: 0;
+	top:  0;
+	height: 26px;
+	width:  10px;
+	background: transparent;
+}
